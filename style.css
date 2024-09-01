@@ -1,0 +1,257 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* From Uiverse.io by adamgiebl */
+
+#loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  background-color: rgb(255, 255, 255);
+}
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #406da5;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #6793fb;
+    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#bg {
+  height: 100%;
+  width: 100%;
+}
+#bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#forground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(204, 176, 176, 0.103);
+  z-index: 100;
+  top: 0px;
+  pointer-events: none;
+}
+nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(223, 213, 213, 0.192);
+  backdrop-filter: blur(10px);
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  pointer-events: all;
+}
+
+#logo {
+  background-color: rgba(255, 0, 0, 0);
+}
+#logo h1 {
+  font-size: 30px;
+  background-color: rgba(255, 255, 0, 0);
+}
+#menu {
+  background-color: rgba(255, 255, 0, 0);
+}
+#menu i {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#menubox {
+  width: 600px;
+  background-color: rgba(216, 205, 205, 0.301);
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 104;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  backdrop-filter: blur(10px);
+  left: -600px;
+  pointer-events: all;
+}
+
+#menubox:hover {
+  background-color: rgba(235, 221, 221, 0.068);
+  box-shadow: 2px 2px 100px rgb(116, 112, 112);
+}
+#menubox i:hover {
+  color: rgb(0, 0, 0);
+}
+#menuclose {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 40px;
+}
+.media {
+  min-height: 80%;
+  background-color: rgba(156, 134, 134, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 20px;
+  margin: auto 0px;
+  text-align: start;
+}
+.media a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 80%;
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#info {
+  position: absolute;
+  bottom: 30vh;
+  left: 20vw;
+  text-align: left;
+  padding: 10px;
+  line-height: 1;
+}
+#info h1 {
+  font-size: 6vw;
+  text-transform: uppercase;
+  background-color: rgba(236, 227, 227, 0.158);
+  padding: 0px 30px;
+  color: rgba(230, 222, 228, 0.863);
+  text-shadow: 3px 3px 20px rgb(0, 0, 0);
+}
+
+#info h6 {
+  font-size: 3vw;
+  text-transform: capitalize;
+  padding: 0px 30px;
+  color: rgba(230, 222, 228, 0.863);
+  text-shadow: 3px 3px 20px rgb(0, 0, 0);
+  background-color: rgba(236, 227, 227, 0.158);
+}
+
+footer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-size: 20px;
+  background-color: rgba(228, 216, 216, 0.267);
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(20px);
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    }
+    #menubox{
+        width: 100%;
+    }
+    #info{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        bottom: 50vh;
+        left: 2vw;
+    }
+    #info h1{
+        font-size: 10vw;
+        /* white-space: nowrap; */
+    }
+    #info h6{
+        font-size: 4vw;
+    }
+  }
